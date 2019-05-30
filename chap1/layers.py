@@ -1,3 +1,5 @@
+import numpy as np
+
 class MatMul:
     def __init__(self, W):
         self.params = [W]
@@ -37,7 +39,7 @@ class Affine:
         self.grads = [np.zeros_like(W), np.zeros_like(b)]
         self.x = None
 
-    def forward(self. x):
+    def forward(self, x):
         W,b = self.params
         out = np.dot(x, W) + b
         self.x = x
